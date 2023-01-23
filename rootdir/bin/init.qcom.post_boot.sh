@@ -806,11 +806,6 @@ function sdm660_sched_schedutil_dcvs() {
 
 target=`getprop ro.board.platform`
 
-KernelVersionStr=`cat /proc/sys/kernel/osrelease`
-KernelVersionS=${KernelVersionStr:2:2}
-KernelVersionA=${KernelVersionStr:0:1}
-KernelVersionB=${KernelVersionS%.*}
-
 function configure_read_ahead_kb_values() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
@@ -894,10 +889,10 @@ function configure_memory_parameters() {
 ProductName=`getprop ro.product.name`
 low_ram=`getprop ro.config.low_ram`
 
-if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "alioth" ]; then
-      configure_read_ahead_kb_values
-      echo 0 > /proc/sys/vm/page-cluster
-      echo 100 > /proc/sys/vm/swappiness
+    if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "alioth" ]; then
+        configure_read_ahead_kb_values
+        echo 0 > /proc/sys/vm/page-cluster
+        echo 100 > /proc/sys/vm/swappiness
 
       #add memory limit to camera cgroup
         MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -1018,6 +1013,14 @@ else
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
     echo 1 > /proc/sys/vm/watermark_scale_factor
+
+    # Disable the feature of watermark boost for 8G and below device
+    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+    MemTotal=${MemTotalStr:16:8}
+
+    if [ $MemTotal -le 8388608 ]; then
+        echo 0 > /proc/sys/vm/watermark_boost_factor
+    fi
 
     configure_read_ahead_kb_values
 

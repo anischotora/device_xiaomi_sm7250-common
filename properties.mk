@@ -115,7 +115,7 @@ audio.sys.mute.latency.factor=2 \
 audio.sys.noisy.broadcast.delay=500 \
 audio.sys.offload.pstimeout.secs=3 \
 audio.sys.routing.latency=0 \
-ro.af.client_heap_size_kbyte=7168 \
+ro.af.client_heap_size_kbyte=7168
 
 # Better RAM
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -167,9 +167,11 @@ bluetooth.profile.pbap.server.enabled=true \
 bluetooth.profile.sap.server.enabled=true
 
 # Blurs
+PRODUCT_VENDOR_PROPERTIES += \
 ro.surface_flinger.supports_background_blur=1
 
 # Disable blur on app launch
+PRODUCT_VENDOR_PROPERTIES += \
 ro.launcher.blur.appLaunch=1
 
 # Camera
@@ -191,13 +193,13 @@ ro.soc.model=SM7250
 
 # Crypto
 PRODUCT_VENDOR_PROPERTIES += \
-ro.crypto.volume.filenames_mode=aes-256-cts \
+ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
 dalvik.vm.dex2oat64.enabled=true \
-dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7 \
-dalvik.vm.dex2oat-threads 6
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,7 \
+dalvik.vm.dex2oat-threads=6
 
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
@@ -249,7 +251,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # FM
 PRODUCT_VENDOR_PROPERTIES += \
-vendor.hw.fm.init=0 \
+vendor.hw.fm.init=0
 
 # Fwk detect
 PRODUCT_VENDOR_PROPERTIES += \
@@ -287,7 +289,6 @@ persist.demo.hdmirotationlock=false \
 persist.sys.sf.color_mode=0 \
 persist.sys.sf.color_saturation=1.0 \
 persist.sys.sf.native_mode=2 \
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lito.api30 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
@@ -297,19 +298,13 @@ debug.hwui.renderer=opengl \
 debug.hwui.use_hint_manager=true \
 debug.hwui.target_cpu_time_percent=30
 
-# IMS
-PRODUCT_SYSTEM_PROPERTIES += \
-persist.dbg.volte_avail_ovr=1 \
-persist.dbg.vt_avail_ovr=1 \
-persist.dbg.wfc_avail_ovr=1
-
 # Keystore
 PRODUCT_VENDOR_PROPERTIES += \
 ro.hardware.keystore_desede=true
 
 # LMKD
 PRODUCT_SYSTEM_PROPERTIES += \
-ro.config.low_ram = false
+ro.config.low_ram=false
 
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
@@ -396,7 +391,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 ro.telephony.default_network=33,33
 
 #system prop for RmNet Data
-PRODUCT_VENDOR_PROPERTIES \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.rmnet.data.enable=true \
 persist.data.wda.enable=true \
 persist.data.df.dl_mode=5 \
@@ -488,3 +483,9 @@ MultitouchSettleInterval=1ms \
 MultitouchMinDistance=1px \
 TapInterval=1ms \
 TapSlop=1px
+
+# ZRAM Writeback
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.zram.mark_idle_delay_mins=60 \
+ro.zram.first_wb_delay_mins=180 \
+ro.zram.periodic_wb_delay_hours=24

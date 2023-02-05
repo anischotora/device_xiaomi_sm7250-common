@@ -75,7 +75,31 @@
     <string name="dirac_headset_scenario_music">音楽</string>
     <string name="dirac_headset_scenario_video">ビデオ</string>
     <string name="dirac_headset_scenario_vocal">音声</string>
-    
+
+    <!-- Popup camera settings -->
+    <string name="popup_led_title">カメラ LED</string>
+    <string name="popup_led_summary">フロントカメラを上げ下げするときに LED ライトを表示する</string>
+    <string name="popup_sound_title">サウンド効果</string>
+    <string name="popup_title_muqin">木琴</string>
+    <string name="popup_title_yingyan">コンドル</string>
+    <string name="popup_title_mofa">マジック</string>
+    <string name="popup_title_jijia">メカ</string>
+    <string name="popup_title_chilun">歯車</string>
+    <string name="popup_title_cangmen">キャビンドア</string>
+
+    <!-- Popup camera strings -->
+    <string name="popup_camera_tip">注意</string>
+    <string name="popup_camera_takeback_failed_times_calibrate">前面カメラを複数回終了することができませんでした。カメラのキャリブレーションを試してみてください。</string>
+    <string name="popup_camera_popup_failed_times_calibrate">前面カメラを複数回開くことができませんでした。カメラのキャリブレーションを試してみてください。</string>
+    <string name="popup_camera_calibrate_running">キャリブレーション中はフロントカメラを使用できません。</string>
+    <string name="popup_camera_calibrate_now">キャリブレーション</string>
+    <string name="popup_camera_calibrate_failed">キャリブレーションできませんでした。</string>
+    <string name="popup_camera_calibrate_success">正常にキャリブレーションされました。前面カメラを起動してみてください。</string>
+    <string name="stop_operate_camera_frequently">前面カメラを頻繁に開いているようです。</string>
+    <string name="takeback_camera_front_failed">前面カメラを閉じることができませんでした。もう一度お試しください。</string>
+    <string name="popup_camera_front_failed">前面カメラを開けませんでした。もう一度お試しください。</string>
+    <string name="popup_camera_proximity_obstructed">前面カメラを開くには近接センサーから手を放してください...</string>
+
     <!-- Clear speaker -->
     <string name="clear_speaker_title">スピーカー掃除</string>
     <string name="clear_speaker_summary">30秒音楽を鳴らしてスピーカーを清掃する</string>

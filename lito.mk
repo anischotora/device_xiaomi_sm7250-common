@@ -532,6 +532,10 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Disable Rescue Party on userdebug & eng build
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PRODUCT_PROPERTIES += \

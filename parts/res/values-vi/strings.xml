@@ -76,29 +76,6 @@
     <string name="dirac_headset_scenario_video">Video</string>
     <string name="dirac_headset_scenario_vocal">Giọng nói</string>
 
-    <!-- Popup camera settings -->
-    <string name="popup_led_title">Đèn LED máy ảnh</string>
-    <string name="popup_led_summary">Hiển thị đèn LED khi máy ảnh trước khởi chạy và trượt lên</string>
-    <string name="popup_sound_title">Hiệu ứng âm thanh</string>
-    <string name="popup_title_muqin">Mộc cầm</string>
-    <string name="popup_title_yingyan">Chim ưng</string>
-    <string name="popup_title_mofa">Ma thuật</string>
-    <string name="popup_title_jijia">Mecha</string>
-    <string name="popup_title_chilun">Bánh răng</string>
-    <string name="popup_title_cangmen">Cửa cabin</string>
-    <!-- Popup camera strings -->
-    <string name="popup_camera_tip">Chú ý</string>
-    <string name="popup_camera_takeback_failed_times_calibrate">Không thể đóng máy ảnh trước nhiều lần. Thử hiệu chỉnh máy ảnh.</string>
-    <string name="popup_camera_popup_failed_times_calibrate">Không thể mở máy ảnh trước nhiều lần. Thử hiệu chỉnh máy ảnh.</string>
-    <string name="popup_camera_calibrate_running">Máy ảnh trước không dùng được trong quá trình hiệu chỉnh.</string>
-    <string name="popup_camera_calibrate_now">Hiệu chỉnh</string>
-    <string name="popup_camera_calibrate_failed">Không thể hiệu chỉnh</string>
-    <string name="popup_camera_calibrate_success">Hiệu chỉnh thành công. Giờ bạn có thể mở máy ảnh trước.</string>
-    <string name="stop_operate_camera_frequently">Có vẻ bạn mở máy ảnh trước quá thường xuyên.</string>
-    <string name="takeback_camera_front_failed">Không thể đóng máy ảnh trước. Thử lại.</string>
-    <string name="popup_camera_front_failed">Không thể mở máy ảnh trước. Thử lại.</string>
-    <string name="popup_camera_proximity_obstructed">Bỏ tay ra khỏi cảm biến tiệm cận để mở camera trước...</string>
-
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Làm sạch loa</string>
     <string name="clear_speaker_summary">Phát một đoạn âm thanh dài 30 giây để làm sạch loa</string>

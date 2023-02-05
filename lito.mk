@@ -540,3 +540,6 @@ endif
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm7250-common/sm7250-common-vendor.mk)
+
+# Inherit Hana's custom
+$(call inherit-product, vendor/hana/config/custom.mk)

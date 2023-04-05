@@ -1,6 +1,12 @@
 set_prop(vendor_init, vendor_alarm_boot_prop)
 set_prop(vendor_init, vendor_fod_prop)
 
+# Allow vendor_init to set thermal prop
+set_prop(vendor_init, vendor_thermal_normal_prop)
+
+set_prop(vendor_init, vendor_camera_prop)
+set_prop(vendor_init, vendor_power_prop)
+
 # Allow vendor init to set SSR property
 set_prop(vendor_init, vendor_ssr_prop)
 
